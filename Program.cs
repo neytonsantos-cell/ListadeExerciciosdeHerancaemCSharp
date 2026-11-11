@@ -29,3 +29,38 @@ digital.ExibirInformacoes();
 Console.WriteLine();
 Console.WriteLine("Informações do Jogo Físico:");
 fisico.ExibirInformacoes();
+
+//Exercício 4 - Sistema de notificações
+Console.WriteLine("\n===== 4. Notificações =====");
+List<Notificacao> notificacoes = new List<Notificacao>
+            {
+                new Notificacao(),
+                new NotificacaoEmail(),
+                new NotificacaoSMS(),
+                new NotificacaoPush()
+            };
+foreach (Notificacao n in notificacoes)
+{
+    n.Enviar();
+}
+
+//Exercício 5 - Sistema de entregas
+Console.WriteLine("\n===== 5. Entregas =====");
+List<Entrega> entregas = new List<Entrega>
+            {
+                new EntregaExpressa(100),
+                new EntregaEconomica(100),
+                new RetiradaLocal()
+            };
+foreach (Entrega e in entregas)
+{
+    Console.WriteLine($"{e.GetType().Name}: R$ {e.CalcularFrete():F2}");
+}
+
+//Exercício 6 - Sistema de exportação e impressão
+Console.WriteLine("\n===== 6. Documentos =====");
+Relatorio relatorio = new Relatorio();
+Contrato contrato = new Contrato();
+relatorio.Imprimir();
+relatorio.Exportar();
+contrato.Imprimir();
