@@ -64,3 +64,13 @@ Contrato contrato = new Contrato();
 relatorio.Imprimir();
 relatorio.Exportar();
 contrato.Imprimir();
+
+//Exercício 7 - Sistema de equipamentos
+Console.WriteLine("\n===== 7. Equipamentos =====");
+Equipamento notebook = new Notebook("Dell Inspiron", "NB-12345", 16);
+Equipamento smartphone = new Smartphone("Galaxy S24", "SP-67890", 256);
+Console.WriteLine("Informações do Notebook:");
+notebook.ExibirInformacoes();
+Console.WriteLine();
+Console.WriteLine("Informações do Smartphone:");
+smartphone.ExibirInformacoes();
