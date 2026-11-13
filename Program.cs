@@ -1,4 +1,5 @@
 ﻿using ListadeExerciciosdeHerancaemCSharp;
+using ListadeExerciciosdeHerença;
 
 //Exercício 1 - Sistema de veículos
 Console.WriteLine("===== 1. Veículos =====");
@@ -74,3 +75,18 @@ notebook.ExibirInformacoes();
 Console.WriteLine();
 Console.WriteLine("Informações do Smartphone:");
 smartphone.ExibirInformacoes();
+
+//Exercício 8 - Sistema de animais
+Console.WriteLine("\n===== 8. Animais =====");
+List<Animal> animais = new List<Animal>
+{
+    new Cachorro("Rex"),
+    new Gato("Mimi"),
+    new Passaro("Piu")
+};
+foreach (Animal animal in animais)
+{
+    animal.Apresentar();
+    animal.EmitirSom();
+    Console.WriteLine();
+}
